@@ -1,0 +1,139 @@
+html,
+body {
+  font: 100% "Lato", sans-serif;
+  font-weight: 300;
+  height: 100%;
+  }
+
+.blue-bg {
+  background-color: #ffffff;
+  color: rgb(228,223,193);
+  height: 100%; }
+
+.circle {
+  font-weight: bold;
+  padding: 15px 20px;
+  border-radius: 50%;
+  background-color: rgb(41, 41, 41);
+  color: #ffffff;
+  max-height: 50px;
+  z-index: 2; }
+
+.how-it-works.row {
+  display: flex; }
+
+  .how-it-works.row .col-2 {
+    display: inline-flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center; }
+
+
+
+  .how-it-works.row .col-2.bottom::after {
+    height: 50%;
+    left: 50%;
+    top: 50%; }
+
+  .how-it-works.row .col-2.full::after {
+    height: 100%;
+    left: calc(50% - 3px); }
+    
+  .how-it-works.row .col-2.top::after {
+    height: 50%;
+    left: 50%;
+    top: 0; }
+
+.timeline div {
+  padding: 0;
+  height: 40px; }
+
+  
+.timeline hr {
+  border-top: 10px solid rgb(46, 46, 46);
+  margin: 0;
+  top: 17px;
+  position: relative; }
+
+.timeline .col-2 {
+  display: flex;
+  overflow: hidden; }
+
+.timeline .corner {
+  border: 10px solid rgb(46, 46, 46);
+  width: 100%;
+  position: relative;
+  border-radius: 15px; }
+
+.timeline .top-right {
+  left: 50%;
+  top: -32%; }
+
+.timeline .left-bottom {
+  left: -50%;
+  top: calc(50% - 3px); }
+
+.timeline .top-left {
+  left: -50%;
+  top: -32%; }
+
+.timeline .right-bottom {
+  left: 50%;
+  top: calc(50% - 3px); }
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+.border {
+  border-style: solid;
+  border-width: 5px;
+  border-radius: 20px;
+  
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+ 
+.css-selector {
+  background: linear-gradient(210deg, #437ca7, #61473d, #b57c4c, #e7d892);
+  background-size: 800% 800%;
+
+  -webkit-animation: AnimationName 14s ease infinite;
+  -moz-animation: AnimationName 14s ease infinite;
+  animation: AnimationName 14s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}

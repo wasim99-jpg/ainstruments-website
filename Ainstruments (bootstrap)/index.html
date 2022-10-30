@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en" style="min-width: 434px;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Ainstruments</title>
+    <link rel="icon" type="image/png" sizes="2000x800" href="assets/img/banner.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allan&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bilbo+Swash+Caps&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cormorant+SC&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Doppio+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Euphoria+Script&amp;display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/roadmap.css">
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/3.0.0-rc.5/web3.min.js" integrity="sha512-jRzb6jM5wynT5UHyMW2+SD+yLsYPEU5uftImpzOcVTdu1J7VsynVmiuFTsitsoL5PJVQi+OtWbrpWq/I+kkF4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body style="background: url(&quot;banner.png&quot;) center / cover no-repeat, #000000;min-width: 434px;height: 1077.438px;">
+
+    <video autoplay muted loop id="myVideo">
+        <source src="Sequence_01.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+    <nav class="navbar navbar-light navbar-expand-lg pulse animated navigation-clean-button" style="background: rgba(0,0,0,0);padding-top: 20px;padding-bottom: 20px;">
+        <div class="container"><a class="navbar-brand" href="#" style="color: rgb(234,233,206);"></a><a onClick="startApp()" class="btn btn-light action-button" role="button" data-bss-hover-animate="pulse" href="#" style="background: rgb(234,233,206);font-weight: bold;width: 130.6875px;height: 64px;border-width: 0px;border-radius: 16px;padding: 19px 12px;color: rgb(0,0,0);font-family: 'Cormorant SC', serif;font-size: 17px;" onClick="startApp" ><span id ="wallet-address">Connect</span></a></div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 d-flex d-sm-flex justify-content-center justify-content-sm-center" style="padding: 32px;font-family: 'Aguafina Script', serif;">
+                <h1 class="bounce animated" style="text-align: center;color: rgb(228,223,193);font-size: 79px;font-family: 'Dancing Script', serif;font-weight: bold;">AIHARMONY</h1>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container " style="padding-bottom:50px;">
+        <div class="row d-sm-flex d-xxl-flex justify-content-sm-center align-items-xxl-center">
+            <div class="col d-flex d-sm-flex d-md-flex justify-content-center justify-content-sm-center justify-content-md-center pulse animated"><img class="img-fluid d-flex d-sm-flex d-md-flex flex-shrink-1 justify-content-center justify-content-sm-center justify-content-md-center" src="assets/img/ezgif.com-gif-maker.gif" style="width: 416px; height: 740px; object-fit: none;border-radius: 57px;border-style: solid;border-width: 10px;border-color: #ddc274;"></div>
+            <div class="col-md-4 d-md-flex d-xxl-flex justify-content-md-center justify-content-xxl-center align-items-xxl-center" style="min-width: 380px;margin-top: 40px;background: #eeedd0;border-radius: 22px;">
+                <div class="row justify-content-center">
+                    <div class="col d-xxl-flex justify-content-xxl-center align-items-xxl-center pulse animated" style="min-width: 658px;">
+                        <p class="d-flex d-sm-flex d-md-flex d-lg-flex d-xxl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center align-items-xxl-center" style="padding-top: 22px;font-family: 'Dancing Script', serif;font-weight: bold;font-size: 23px;"><span id="eligible">Please connect Metamask 🦊</span></p>
+                    </div>
+                    <div class="col" style="min-width: 658px;">
+                        <h1 class="d-flex justify-content-center align-items-md-center" style="font-size: 54px;color: rgb(0,0,0);font-family: 'Dancing Script', serif;font-weight: bold;"><span id="soldout">Mint here</span></h1>
+                    </div>
+                    <div class="col d-flex d-sm-flex d-md-flex d-xl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-xl-center">
+                        <div class="table-responsive text-center d-lg-flex d-xl-flex flex-shrink-1 justify-content-lg-center" style="min-width: 412px;max-width: 412px;">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th style="border-width: 0px;"><button id="min" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="font-size: 26px;background: #1f5961;border-radius: 15px;font-family: 'Dancing Script', serif;">min</button></th>
+                                        <th style="border-width: 0px;"><button id="dec" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="font-size: 26px;background: #1f5961;border-radius: 9px;">-</button></th>
+                                        <th style="font-size: 39px;border-width: 0px;color: rgb(0,0,0);"><span id="amount">5</span></th>
+                                        <th style="border-width: 0px;"><button id="inc" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="font-size: 26px;background: #1f5961;border-radius: 9px;">+</button></th>
+                                        <th style="border-width: 0px;"><button id="max" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="font-size: 26px;background: #1f5961;border-radius: 15px;font-family: 'Dancing Script', serif;">max</button></th>
+                                    </tr>
+                                </thead>
+                                <tbody style="border-width: 0px;"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col d-flex d-sm-flex justify-content-center justify-content-sm-center"><button id="Mint" class="btn btn-primary" data-bss-hover-animate="pulse" type="button" style="width: 309.5px;height: 74px;font-size: 30px;background: #b8803f;border-radius: 21px;box-shadow: 0px 1px 20px 20px #ddc274;border-width: 0px;font-family: 'Dancing Script', serif;">MINT</button></div>
+                    <div class="col d-flex d-sm-flex d-md-flex d-xl-flex d-xxl-flex justify-content-center justify-content-sm-center justify-content-md-center align-items-md-center justify-content-xl-center justify-content-xxl-center">
+                        <h1 class="d-flex justify-content-center align-items-md-center" style="padding-top: 15px;padding-bottom: 16px;text-align: center;width: 352px;font-family: 'Dancing Script', serif;font-weight: bold;"><span id="mint-count" >0</span>  / 999 minted</h1>
+                    </div>
+                    <div class="col d-flex d-sm-flex d-md-flex d-xl-flex d-xxl-flex justify-content-center justify-content-sm-center justify-content-md-center justify-content-xl-center justify-content-xxl-center">
+                        <h1 class="d-flex justify-content-center" style="width: 352px;padding-top: 15px;padding-bottom: 16px;font-size: 20px;text-align: center;font-family: 'Bilbo Swash Caps', serif;font-weight: bold;"><span id="status" style="font-family: 'Dancing Script', serif;">"Music should strike fire from the heart of man, and bring tears from the eyes of woman" - Ludwig Van Beethoven 🎷</span></h1>
+                    </div>
+                </div>
+            </div>
+            <audio id="heartbeat" src="assets/audio/Short guitar riff - Sound effects.mp3" preload="auto">
+                Your browser does not support the <code>audio</code> element.
+            </audio>
+            <audio  src="assets/audio/In a Million Days.mp3" preload="auto">
+                Your browser does not support the <code>audio</code> element.
+            </audio>
+            
+            <div id="play" class="col d-md-flex d-lg-flex d-xl-inline justify-content-xl-center pulse animated infinite" style="padding-top: 7px;"><div class="top-left" style="color: rgb(234,233,206);font-family: 'Dancing Script';"><h5>Hover Me🎶🎵</h5></div><img class="img-fluid" src="assets/img/pfp.png" style="min-width: 350px;border-radius: 57px;border-style: solid;border-width: 10px;border-color: #ddc274;"></div>
+            
+        </div>
+    </div>
+
+<!--roadmap-->
+    <div class="container-fluid" style="padding-top:100px;padding-bottom:100px;background-color: #ffeadd;">
+        
+        <div class="container" style="border-style: solid;border-width: 10px;border-radius: 20px;border-color: #ddc274;">
+            <h1 class="pb-3 pt-2" style="text-align: center;color: rgb(0, 0, 0);font-size: 72px;font-family: 'Dancing Script', serif;font-weight: bold;">ROADMAP</h1>
+            <!--first section-->
+            <div class="row align-items-center how-it-works" style="margin-bottom:50px;">
+                <div class="col-2 text-center bottom">
+                    <div class="circle">1</div>
+                </div>
+                <div class="col-6" style="margin-top:50px;">
+                    <h2 style="color: rgb(0, 0, 0);font-family: 'Dancing Script', serif;font-weight: bold;">STAKE</h2>
+                    <p style = "color: rgb(0, 0, 0);"> Stake your instruments for rewards such as Airdrops, whitelist tokens and later on Harmony tokens. Instruments are able to be staked as soon as they're minted. </p>
+                    <img class="img-fluid" src="assets/img/roadmap images/piano_1.png" style="border-radius: 10px; max-height: 250px;">
+                    <img class="img-fluid" src="assets/img/roadmap images/harp_2.png" style="border-radius: 10px; max-height: 250px;">
+                </div>
+            </div>
+            <!--path between 1-2-->
+            <div class="row timeline">
+                <div class="col-2">
+                    <div class="corner top-right"></div>
+                </div>
+                <div class="col-8">
+                    <hr />
+                </div>
+                <div class="col-2">
+                    <div class="corner left-bottom"></div>
+                </div>
+            </div>
+            <!--second section-->
+            <div class="row align-items-center justify-content-end how-it-works" style="margin-bottom:50px;margin-top: 50px;" >
+                <div class="col-6 text-right">
+                    <h2 style="font-weight: bold;color: rgb(0, 0, 0);font-family: 'Dancing Script', serif;">UTILITY</h2>
+                    <p style="color: rgb(0, 0, 0);"> AlHarmony offers utility in digital and physical ways such as sound softwares, merch giveaways and real customized Ukuleles. Visiting Paris soon? With ownership of an Alharmony NFT you get exclusive access to our music studios located at 16eme arrondissement, stop by for a drink and entertainment on us!</p>
+                    <img class="img-fluid" src="assets/img/roadmap images/sax_3.png" style="border-radius: 10px; max-height: 250px;">
+                    <img class="img-fluid" src="assets/img/roadmap images/violin_1.png" style="border-radius: 10px; max-height: 250px;">
+                </div>
+                <div class="col-2 text-center full">
+                    <div class="circle">2</div>
+                </div>
+            </div>
+            <!--path between 2-3-->
+            <div class="row timeline">
+                <div class="col-2">
+                    <div class="corner right-bottom"></div>
+                </div>
+                <div class="col-8">
+                    <hr />
+                </div>
+                <div class="col-2">
+                    <div class="corner top-left"></div>
+                </div>
+            </div>
+            <!--third section-->
+            <div class="row align-items-center how-it-works" style="margin-bottom:50px;margin-top: 50px;">
+                <div class="col-2 text-center top">
+                    <div class="circle">3</div>
+                </div>
+                <div class="col-6">
+                    <h2 style="font-weight: bold;color: rgb(0, 0, 0);font-family: 'Dancing Script', serif;">UPGRADES & AIRDROPS</h2>
+                    <p style="color: rgb(0, 0, 0);"> As a holder, you are entitled to all future airdrops with upgrading utility to make your instrument more rare. These upgrades happen at random times and some will be rarer than others.</p>
+                    <img class="img-fluid" src="assets/img/roadmap images/drum_set_1.png" style="border-radius: 10px; max-height: 250px;">
+                    <img class="img-fluid" src="assets/img/roadmap images/guitar_2.png" style="border-radius: 10px; max-height: 250px;">
+                    <br><br>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="script.js"></script>
+    <script src="audio.js"></script>
+    
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
